@@ -1,0 +1,312 @@
+/**************************************************
+Fonts
+Droid Serif
+Droid Sans
+Droid Sans Mono
+
+Font Scaling
+6.854rem
+4.236rem
+2.618rem
+1.618rem
+1.0rem
+0.618rem
+
+Colour scheme
+
+**************************************************/
+@import 'https://fonts.googleapis.com/css?family=Vollkorn|Droid+Sans+Mono|Acme';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Droid Sans', 'more font stack stuff', sans-serif;
+}
+/*************************** 
+DEFAULTS - MOBILE FIRST 
+***************************/
+h1{
+    font: bold 4.236rem 'Acme';
+}
+h2{
+    font: bold 2.618rem 'Acme';
+}
+li, p, a{
+    font: bold 1.618rem 'Vollkorn';
+}
+pre, code, kbd{
+    font: normal 1.0rem 'Acme', 
+}
+/***************************
+    LAYOUT - MOBILE FIRST
+***************************/
+.wrapper{
+    width: 95%;
+    margin: 1rem auto 0rem;
+    padding: 1rem;
+    background-color: hsla(150, 50%, 50%, 1);
+    box-shadow: 0px 0px 10px black inset;
+}
+header{
+    width: 100%;
+    background-image: url(https://loremflickr.com/1000/400/puppy);
+    background-size: cover;
+    height: 15rem;
+    border: 10px solid hsla(150, 60%, 75%, 1);
+    box-shadow: 0px 0px 10px black;
+}
+.masthead{
+    width: 100%;
+    padding: auto;
+}
+a{
+    color:black
+}
+.masthead > h1{
+    font-size: 12vw;
+    text-align: center;
+    text-shadow: 0px 0px 10px hsla(1,0%,80%,1);
+    margin-top: 3rem;
+}
+nav{
+    width: 100%;
+    background-color: hsla(150, 80%, 50%, 1);
+    margin: 1rem 0rem;
+    box-shadow: 0px 0px 10px black;
+}
+
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 70%;
+  height: 200px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: black;
+  text-align: center;
+}
+
+
+nav>ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    border: 10px solid hsla(150, 60%, 75%, 1);
+}
+nav li{
+    width: 100%;
+    list-style: none; 
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px black;
+    padding: 0.3rem;
+    margin: 0rem 0.3rem;
+    background-color: hsla(150, 60%, 75%, 1);
+}
+nav li:hover{
+    transition: transform 300ms;
+    transform: scale(1.1,1.1);
+    background-color: hsla(150, 60%, 60%, 1);
+}
+nav a,
+nav a:link,
+nav a:visited{
+    display: block;
+    font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 1.4rem;
+    text-decoration: none;
+    
+    
+}
+nav a:active,
+nav a:focus,
+nav a:hover{
+}
+.firstheader{
+    text-align: center;
+    text-shadow: 2px 2px 5px white;
+    text-decoration: underline;
+}
+p{
+    background-color: hsla(150, 80%, 50%, 1);
+    border-left: 10px solid hsla(150, 60%, 75%, 1);
+    box-shadow: 0px 0px 10px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+main{
+    width: 100%;
+}
+.col{
+    float: none;
+    width: 100%;
+}
+img{
+    width: 100%;
+    height: auto;
+    border: 10px solid hsla(150, 60%, 75%, 1);
+    box-shadow: 0px 0px 10px;
+    max-height: 190px;
+    max-width: 316px;
+    margin: 0rem auto;
+    display: block;
+}
+#f1_container{
+    
+    margin-bottom: auto;
+}
+footer{
+    width: 100%;
+    background-color: hsla(150, 60%, 75%, 1);
+    box-shadow: 0px 0px 10px black;
+}
+footer>ul>li{
+    display:flex;
+    flex-direction: row;
+    display: block;
+    padding: 0rem auto;
+    text-align: center;
+}
+footer>ul>li>a{
+    color: black;
+    text-decoration: none;
+}
+footer>a>i{
+    display: flex;
+    padding: 0rem 1rem;
+    margin: 0rem auto;
+    justify-content: center;
+}
+footer>ul>li>a:hover{
+    color: hsla(150, 50%, 50%, 1);
+}
+.iconsdiv{
+    padding: 0rem auto;
+    display: flex;
+    justify-content: center;
+}
+.icons{
+    padding: 0rem 1rem;
+}
+.icons:hover{
+    color: hsla(150, 50%, 50%, 1);
+}
+@media screen and (max-width:600px){
+    nav a,
+    nav a:link,
+    nav a:visited{
+        font-size: 0.8rem;
+    }
+    img.img1{
+    width: 100%; 
+    display: block;
+    }
+}
+@media screen and (min-width: 800px){
+    header{
+        width: 100%;
+    }
+    nav{
+        width: 100%;
+    }
+    nav>li{
+        width: 20%;
+    }
+    main{
+        width: 100%;
+        display: flex;
+        align-content: center;
+    }
+    p{
+        margin: 1rem;
+    }
+    img.img1{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1200px){
+    main{
+        width:70%;
+        float:right;
+    }
+    header{
+        width:100%;
+    }
+    .wrapper{
+        height: 168vw;
+    }
+    nav{
+        width:  350px;
+        float: left;
+    }
+    nav>ul>li{
+        margin: 0.2rem auto;
+    }
+    h2{
+        margin-top: 1rem;
+    }
+    main{
+        width:70%;
+    }
+    .mainnav{
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper{
+    background-color: hsla(150, 50%, 50%, 1);
+    box-shadow: 0px 0px 10px black inset;
+    }
+    footer{
+        width: 92.5%;
+        bottom: 0;
+        position: fixed;
+    }
+    footer>ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 200px;
+    }
+    footer li{
+        font-size: 1rem;
+    }
+    footer a{
+        font-size: 1rem;
+    }
+    .iconsdiv{
+        display: flex;
+        align-content: flex-start;
+        float: left;
+    }
+}
